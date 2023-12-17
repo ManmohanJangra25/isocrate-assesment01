@@ -9,33 +9,6 @@ body{
     overflow: hidden;
 }
 
-header{
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-header nav ul{
-    list-style: none;
-}
-
-header nav ul li{
-    display: inline-block;
-    padding: 10px;
-}
-
-header nav ul li a{
-    color: #000000;
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-header nav ul li a:hover, header nav ul li a:focus{
-    color: #2b2b2b;
-}
-
-
 /* Modal CSS Starts */
 
 .modal-wrapper{
@@ -45,11 +18,9 @@ header nav ul li a:hover, header nav ul li a:focus{
     height: 100%;
     width: 100%;
     background-color: rgba(000,000,000, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Prata', serif;
     overflow-y: scroll;
+    display: none;
 }
 
 .modal-body{
@@ -58,6 +29,13 @@ header nav ul li a:hover, header nav ul li a:focus{
     background-color: #fff;
     position: relative;
     padding: 78px 45px 78px 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-body.final-popup{
+    display: none;
 }
 
 .modal-close{
@@ -129,6 +107,12 @@ header nav ul li a:hover, header nav ul li a:focus{
     line-height: 1;
 }
 
+#email-form div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 #email-form input{
     outline: none;
     border: none;
@@ -154,6 +138,158 @@ header nav ul li a:hover, header nav ul li a:focus{
     line-height: 16px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.initial-popup::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(#FD8C9480, #b8b8b850, #FD8C9480);
+    top: 0;
+    left: 80px;
+}
+
+.final-popup .modal-content{
+    display: block;
+    margin-top: 80px;
+}
+
+.final-popup .modal-content h1{
+    font-size: 65px;
+    text-align: left;
+    letter-spacing: 13px;
+    line-height: 85px;
+    color: #464646;
+    padding-right: 125px;
+}
+
+.final-popup .modal-content p{
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0.7px;
+    line-height: 35px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.final-popup .modal-content a{
+    text-decoration: none;
+    border-bottom: 3px solid #FD8C94;
+    padding: 10px;
+    color: #FD8C94;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px){
+    .modal-body{
+        width: 80%;
+        padding: 20px;
+    }
+
+    .modal-content{
+        padding: 60px 15px 25px 15px;
+    }
+
+    .modal-content, .content-left, .content-right .offer-discount p, #email-form div{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .content-left h1{
+        font-size: 45px;
+        width: 100%;
+        line-height: 59px;
+        letter-spacing: 3px;
+    }
+
+    .content-left span{
+        line-height: 1;
+    }
+
+    .content-right .offer-discount h1{
+        font-size: 144px;
+        line-height: 1;
+    }
+
+    .content-right .offer-discount p span:first-child{
+        font-size: 70px;
+        letter-spacing: 5.6px;
+    }
+
+    .content-right .offer-discount p span:last-child{
+        font-size: 23px;
+        letter-spacing: 1.84px;
+        line-height: 33px;
+    }
+
+    .content-right .offer-discount{
+        margin-top: 10px;
+    }
+    
+
+    .initial-popup::after{
+        display: none;
+    }
+
+    #email-form button{
+        outline: none;
+        border: none;
+        border: 1px solid #FD8C94;
+        padding: 10px;
+        color: #FD8C94;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .final-popup .modal-content a{
+        width: calc(100% - 20px);
+        display: block;
+        border: 1px solid #FD8C94;
+    }
+
+    #email-form input{
+        text-align: center;
+    }
+    
+    #email-form input::placeholder{
+        color: #464646;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 16px;
+        letter-spacing: 3px;
+    }
+
+    .final-popup .modal-content{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .final-popup .modal-content h1{
+        font-size: 50px;
+        text-align: left;
+        letter-spacing: 4px;
+        line-height: 65px;
+    }
+
+    .final-popup .modal-content p{
+        letter-spacing: 0.7px;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .final-popup .modal-content h1{
+        padding-right: 0;
+    }
 }
 
 /* #email-form input::placeholder{
