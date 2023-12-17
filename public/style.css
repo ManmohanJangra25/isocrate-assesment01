@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Prata&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: #aaaaaa;
+    font-family: 'PT Sans', sans-serif;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 10px;
+}
+
+header nav ul li a{
+    color: #000000;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover, header nav ul li a:focus{
+    color: #2b2b2b;
+}
+
+
+/* Modal CSS Starts */
+
+.modal-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(000,000,000, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Prata', serif;
+    overflow-y: scroll;
+}
+
+.modal-body{
+    width: 680px;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+    padding: 78px 45px 78px 90px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.modal-close svg{
+    transform: scale(2);
+}
+
+.modal-close svg path{
+    transition: all 0.2s linear;
+}
+
+.modal-close:hover > svg path{
+    fill: #000000;
+}
+
+.modal-content, .content-left, .content-right .offer-discount, .content-right .offer-discount p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.content-left h1{
+    font-size: 65px;
+    line-height: 85px;
+    font-weight: normal;
+    color: #464646;
+    letter-spacing: 13px;
+    width: 208px;
+    margin: 0;
+}
+
+.content-left span{
+    font-size: 65px;
+    color: #FD8C94;
+}
+
+.content-right .offer-discount h1{
+    font-size: 167px;
+    color: #464646;
+    font-weight: normal;
+    margin: 0;
+}
+
+.content-right .offer-discount p{
+    flex-direction: column;
+    color: #464646;
+}
+
+.content-right .offer-discount p span:first-child{
+    font-size: 82px;
+    line-height: 1;
+}
+
+.content-right .offer-discount p span:last-child{
+    font-size: 28px;
+    line-height: 1;
+}
+
+#email-form input{
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #464646;
+    padding-bottom: 10px;
+}
+
+#email-form input::placeholder{
+    color: #464646;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+#email-form button{
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #FD8C94;
+    padding: 10px;
+    color: #FD8C94;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* #email-form input::placeholder{
+    
+} */
+
+/* Modal CSS Ends */
