@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "firebase": "^10.7.1"
+  },
+  "scripts": {
+    "dev": "",
+    "build": "npm run build",
+    "test": ""
   }
 }
