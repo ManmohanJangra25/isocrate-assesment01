@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    position: relative;
+    height: 300px;
+    width: 160px;
+    overflow: hidden;
+}
+
+.firstbanner{
+    position: relative;
+    background: url(./images/Mission_2_01.jpg) center top;
+    background-size: cover;
+    height: 300px;
+    width: 160px;
+}
+
+.secondbanner{
+    position: absolute;
+    background: url(./images/Mission_2_02.png) center top;
+    background-size: cover;
+    height: 300px;
+    width: 160px;
+    top: -100%;
+    animation: topBottom 1.5s linear 2s infinite forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes topBottom {
+    0%{
+        top: 0;
+    }
+
+    /* 30%{
+        top: 50%;
+    }
+
+    60%{
+        top: 100%;
+    } */
+
+    100%{
+        top: -100%;
+    }
+}
+
+.banner_top{
+    z-index: 999;
+}
+
+.bottle{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 250px;
+}
+
+.logo{
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    height: 70px;
+}
