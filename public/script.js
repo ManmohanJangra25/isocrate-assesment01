@@ -16,7 +16,7 @@ $(document).ready(function () {
     if (email.length == 0 || !email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
         $("#email-form p").removeClass("success");
         $("#email-form p").addClass("error");
-        $("#email-form p").html("Please enter your email address");
+        $("#email-form p").html("Please enter your valid email address");
       return;
     } else {
         $("#email-form p").removeClass("error");
